@@ -32,7 +32,7 @@ Um cartão de visitas digital e interativo com estilo **Motion Design Moderno**,
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/denilson2003/cartao-de-visitas.git
+   git clone https://github.com/dqrz2003/cartao-de-visitas.git
    ```
 2. Abra a pasta do projeto:
    ```bash
@@ -52,4 +52,4 @@ Para disponibilizar seu cartão online publicamente pelo GitHub:
 
 ---
 
-Desenvolvido por **[Denilson](https://github.com/denilson2003)** 🚀
+Desenvolvido por **[Denilson](https://github.com/dqrz2003)** 🚀
