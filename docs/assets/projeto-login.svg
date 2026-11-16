@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0c14" />
+      <stop offset="50%" stop-color="#101322" />
+      <stop offset="100%" stop-color="#07080c" />
+    </linearGradient>
+
+    <!-- Orange / Hot Gradients -->
+    <linearGradient id="primaryOrange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff9100" />
+      <stop offset="50%" stop-color="#ff6a00" />
+      <stop offset="100%" stop-color="#ff3c00" />
+    </linearGradient>
+
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9333ea" />
+      <stop offset="100%" stop-color="#7928ca" />
+    </linearGradient>
+
+    <!-- Card Glass Fill -->
+    <linearGradient id="windowGlass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16192b" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0d101d" stop-opacity="0.95" />
+    </linearGradient>
+
+    <!-- Glow Filters -->
+    <filter id="glowOrange" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="14" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="ambientBlur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="45" />
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="gridPattern" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1" fill="#ffffff" fill-opacity="0.06" />
+    </pattern>
+  </defs>
+
+  <!-- Deep Background -->
+  <rect width="640" height="360" fill="url(#bgGrad)" />
+  <rect width="640" height="360" fill="url(#gridPattern)" />
+
+  <!-- Ambient Glowing Orbs -->
+  <circle cx="180" cy="100" r="110" fill="#ff6a00" fill-opacity="0.25" filter="url(#ambientBlur)" />
+  <circle cx="480" cy="240" r="120" fill="#7928ca" fill-opacity="0.28" filter="url(#ambientBlur)" />
+
+  <!-- Browser/Window Mockup -->
+  <g transform="translate(110, 36)">
+    <!-- Window Shadow & Frame -->
+    <rect x="0" y="0" width="420" height="288" rx="16" fill="url(#windowGlass)" stroke="rgba(255,255,255,0.12)" stroke-width="1.2" />
+
+    <!-- Title Bar -->
+    <rect x="0" y="0" width="420" height="38" rx="16" fill="#111320" />
+    <!-- Fix bottom corners of title bar -->
+    <rect x="0" y="24" width="420" height="14" fill="#111320" />
+    <line x1="0" y1="38" x2="420" y2="38" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+
+    <!-- Window Dots -->
+    <circle cx="20" cy="19" r="5" fill="#ff5f56" />
+    <circle cx="36" cy="19" r="5" fill="#ffbd2e" />
+    <circle cx="52" cy="19" r="5" fill="#27c93f" />
+
+    <!-- URL Bar Pill -->
+    <rect x="120" y="10" width="180" height="18" rx="9" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.06)" />
+    <text x="210" y="23" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="#9aa1b2" text-anchor="middle">auth.denilson.dev</text>
+
+    <!-- Login Card Content -->
+    <!-- Avatar / Key Icon -->
+    <circle cx="210" cy="85" r="24" fill="rgba(255,106,0,0.12)" stroke="rgba(255,106,0,0.4)" stroke-width="1.5" />
+    <g transform="translate(200, 75)" stroke="url(#primaryOrange)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="11" width="14" height="9" rx="2" />
+      <path d="M6 11V7a4 4 0 0 1 8 0v4" />
+    </g>
+
+    <text x="210" y="128" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">Bem-vindo de volta!</text>
+    <text x="210" y="144" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="#9aa1b2" text-anchor="middle">Entre com suas credenciais</text>
+
+    <!-- Input 1: E-mail -->
+    <g transform="translate(75, 158)">
+      <rect x="0" y="0" width="270" height="30" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+      <circle cx="16" cy="15" r="4" fill="none" stroke="#5e6577" stroke-width="1.5" />
+      <line x1="32" y1="15" x2="110" y2="15" stroke="#9aa1b2" stroke-width="2" stroke-linecap="round" />
+    </g>
+
+    <!-- Input 2: Senha (Active Focus with Orange Border) -->
+    <g transform="translate(75, 196)">
+      <rect x="0" y="0" width="270" height="30" rx="8" fill="rgba(255,106,0,0.06)" stroke="url(#primaryOrange)" stroke-width="1.5" />
+      <circle cx="16" cy="15" r="3" fill="#ff6a00" />
+      <circle cx="26" cy="15" r="3" fill="#ff6a00" />
+      <circle cx="36" cy="15" r="3" fill="#ff6a00" />
+      <circle cx="46" cy="15" r="3" fill="#ff6a00" />
+      <circle cx="56" cy="15" r="3" fill="#ff6a00" />
+      <!-- Eye Icon -->
+      <path d="M245 15s-3-4-8-4-8 4-8 4 3 4 8 4 8-4 8-4z" fill="none" stroke="#ff9100" stroke-width="1.5" />
+      <circle cx="245" cy="15" r="1.5" fill="#ff9100" />
+    </g>
+
+    <!-- Submit Button with Glowing Gradient -->
+    <g transform="translate(75, 236)" filter="url(#glowOrange)">
+      <rect x="0" y="0" width="270" height="32" rx="8" fill="url(#primaryOrange)" />
+      <text x="135" y="20" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">ACESSAR CONTA</text>
+    </g>
+  </g>
+
+  <!-- Floating Feature Badges -->
+  <g transform="translate(40, 290)">
+    <rect x="0" y="0" width="130" height="26" rx="13" fill="rgba(255,106,0,0.15)" stroke="rgba(255,106,0,0.4)" stroke-width="1" />
+    <text x="65" y="17" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700" fill="#ff9100" text-anchor="middle">⚡ Real-time Validation</text>
+  </g>
+
+  <g transform="translate(480, 50)">
+    <rect x="0" y="0" width="120" height="26" rx="13" fill="rgba(121,40,202,0.2)" stroke="rgba(147,51,234,0.4)" stroke-width="1" />
+    <text x="60" y="17" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700" fill="#c084fc" text-anchor="middle">✨ Modern Glass UI</text>
+  </g>
+</svg>

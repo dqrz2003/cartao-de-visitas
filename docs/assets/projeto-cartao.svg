@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07080c" />
+      <stop offset="50%" stop-color="#0f111c" />
+      <stop offset="100%" stop-color="#050608" />
+    </linearGradient>
+
+    <linearGradient id="primaryOrange2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff9100" />
+      <stop offset="50%" stop-color="#ff6a00" />
+      <stop offset="100%" stop-color="#ff3c00" />
+    </linearGradient>
+
+    <linearGradient id="purpleGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#7928ca" />
+    </linearGradient>
+
+    <linearGradient id="haloRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff3c00" />
+      <stop offset="50%" stop-color="#ff9100" />
+      <stop offset="100%" stop-color="#ffea00" />
+    </linearGradient>
+
+    <filter id="ambientBlur2" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="40" />
+    </filter>
+
+    <filter id="glowOrange2" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <pattern id="gridPattern2" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1" fill="#ffffff" fill-opacity="0.06" />
+    </pattern>
+  </defs>
+
+  <rect width="640" height="360" fill="url(#bgGrad2)" />
+  <rect width="640" height="360" fill="url(#gridPattern2)" />
+
+  <circle cx="150" cy="200" r="120" fill="#ff6a00" fill-opacity="0.28" filter="url(#ambientBlur2)" />
+  <circle cx="500" cy="120" r="130" fill="#7928ca" fill-opacity="0.3" filter="url(#ambientBlur2)" />
+
+  <!-- Mini Business Card Mockup -->
+  <g transform="translate(70, 35)">
+    <!-- Main Window / Screen -->
+    <rect x="0" y="0" width="500" height="290" rx="20" fill="rgba(16,18,27,0.85)" stroke="rgba(255,255,255,0.12)" stroke-width="1.2" />
+
+    <!-- Top Bar inside window -->
+    <g transform="translate(24, 20)">
+      <!-- Logo icon -->
+      <rect x="0" y="0" width="26" height="26" rx="7" fill="url(#primaryOrange2)" />
+      <text x="13" y="18" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="900" fill="#ffffff" text-anchor="middle">D</text>
+      <text x="36" y="18" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="800" fill="#ffffff">Denilson.dev</text>
+
+      <!-- Status badge right -->
+      <rect x="300" y="2" width="150" height="22" rx="11" fill="rgba(255,106,0,0.1)" stroke="rgba(255,106,0,0.3)" />
+      <circle cx="314" cy="13" r="3.5" fill="#ff6a00" />
+      <text x="375" y="17" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="600" fill="#ff9100" text-anchor="middle">Disponível para projetos</text>
+    </g>
+
+    <!-- Left Column: Profile Mini Card -->
+    <g transform="translate(24, 65)">
+      <rect x="0" y="0" width="230" height="200" rx="16" fill="rgba(24,27,40,0.7)" stroke="rgba(255,255,255,0.08)" />
+
+      <!-- Avatar with glowing neon ring -->
+      <circle cx="50" cy="50" r="26" fill="none" stroke="url(#haloRing)" stroke-width="3" filter="url(#glowOrange2)" />
+      <circle cx="50" cy="50" r="22" fill="#1e2235" />
+      <!-- Stylized face silhouette -->
+      <circle cx="50" cy="45" r="8" fill="#9aa1b2" />
+      <path d="M36 60c0-7.7 6.3-14 14-14s14 6.3 14 14" fill="#9aa1b2" />
+
+      <!-- Tag & Name -->
+      <rect x="90" y="32" width="90" height="15" rx="7.5" fill="rgba(255,106,0,0.12)" stroke="rgba(255,106,0,0.3)" />
+      <text x="135" y="43" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" font-weight="700" fill="#ff9100" text-anchor="middle">UniCesumar • ADS</text>
+
+      <text x="90" y="66" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="800" fill="#ffffff">Denilson</text>
+
+      <!-- Bio lines -->
+      <line x1="20" y1="95" x2="210" y2="95" stroke="#9aa1b2" stroke-width="2.5" stroke-linecap="round" />
+      <line x1="20" y1="110" x2="190" y2="110" stroke="#9aa1b2" stroke-width="2.5" stroke-linecap="round" />
+      <line x1="20" y1="125" x2="140" y2="125" stroke="#5e6577" stroke-width="2.5" stroke-linecap="round" />
+
+      <!-- Mini tech pills -->
+      <rect x="20" y="148" width="60" height="18" rx="6" fill="rgba(255,255,255,0.06)" />
+      <text x="50" y="160" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" font-weight="600" fill="#e2e8f0" text-anchor="middle">⚡ HTML/CSS</text>
+
+      <rect x="86" y="148" width="56" height="18" rx="6" fill="rgba(255,255,255,0.06)" />
+      <text x="114" y="160" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" font-weight="600" fill="#e2e8f0" text-anchor="middle">✨ JavaScript</text>
+
+      <rect x="148" y="148" width="62" height="18" rx="6" fill="rgba(255,255,255,0.06)" />
+      <text x="179" y="160" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" font-weight="600" fill="#e2e8f0" text-anchor="middle">🚀 GitHub</text>
+    </g>
+
+    <!-- Right Column: Connections Hub Mini 2x2 Grid -->
+    <g transform="translate(268, 65)">
+      <!-- Hub title -->
+      <rect x="0" y="6" width="3" height="12" rx="1.5" fill="#ff6a00" />
+      <text x="10" y="16" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" fill="#ffffff">Minhas Conexões</text>
+
+      <!-- 2x2 Cards -->
+      <!-- Card 1 GitHub -->
+      <rect x="0" y="28" width="98" height="75" rx="12" fill="rgba(24,27,40,0.7)" stroke="rgba(255,106,0,0.3)" stroke-width="1.2" />
+      <circle cx="20" cy="48" r="10" fill="rgba(255,106,0,0.15)" />
+      <text x="20" y="52" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="900" fill="#ff9100" text-anchor="middle">GH</text>
+      <text x="14" y="78" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700" fill="#ffffff">GitHub</text>
+      <line x1="14" y1="88" x2="60" y2="88" stroke="#5e6577" stroke-width="2" stroke-linecap="round" />
+
+      <!-- Card 2 LinkedIn -->
+      <rect x="108" y="28" width="98" height="75" rx="12" fill="rgba(24,27,40,0.7)" stroke="rgba(255,255,255,0.08)" />
+      <circle cx="128" cy="48" r="10" fill="rgba(255,255,255,0.06)" />
+      <text x="128" y="52" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="900" fill="#9aa1b2" text-anchor="middle">in</text>
+      <text x="122" y="78" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700" fill="#ffffff">LinkedIn</text>
+      <line x1="122" y1="88" x2="168" y2="88" stroke="#5e6577" stroke-width="2" stroke-linecap="round" />
+
+      <!-- Card 3 Instagram -->
+      <rect x="0" y="113" width="98" height="75" rx="12" fill="rgba(24,27,40,0.7)" stroke="rgba(255,255,255,0.08)" />
+      <circle cx="20" cy="133" r="10" fill="rgba(255,255,255,0.06)" />
+      <text x="20" y="137" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="900" fill="#9aa1b2" text-anchor="middle">ig</text>
+      <text x="14" y="163" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700" fill="#ffffff">Instagram</text>
+      <line x1="14" y1="173" x2="60" y2="173" stroke="#5e6577" stroke-width="2" stroke-linecap="round" />
+
+      <!-- Card 4 WhatsApp -->
+      <rect x="108" y="113" width="98" height="75" rx="12" fill="rgba(24,27,40,0.7)" stroke="rgba(255,255,255,0.08)" />
+      <circle cx="128" cy="133" r="10" fill="rgba(255,255,255,0.06)" />
+      <text x="128" y="137" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="900" fill="#9aa1b2" text-anchor="middle">wa</text>
+      <text x="122" y="163" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700" fill="#ffffff">WhatsApp</text>
+      <line x1="122" y1="173" x2="168" y2="173" stroke="#5e6577" stroke-width="2" stroke-linecap="round" />
+    </g>
+  </g>
+
+  <!-- Floating Badge -->
+  <g transform="translate(470, 20)">
+    <rect x="0" y="0" width="135" height="26" rx="13" fill="rgba(255,106,0,0.18)" stroke="rgba(255,106,0,0.4)" stroke-width="1" />
+    <text x="67" y="17" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700" fill="#ff9100" text-anchor="middle">💳 Motion Business Card</text>
+  </g>
+</svg>

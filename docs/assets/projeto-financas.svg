@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0c16" />
+      <stop offset="50%" stop-color="#12162a" />
+      <stop offset="100%" stop-color="#07080d" />
+    </linearGradient>
+
+    <linearGradient id="primaryOrange3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff9100" />
+      <stop offset="100%" stop-color="#ff3c00" />
+    </linearGradient>
+
+    <linearGradient id="chartBarGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ff9100" />
+      <stop offset="100%" stop-color="#7928ca" />
+    </linearGradient>
+
+    <linearGradient id="chartAreaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ff6a00" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#ff6a00" stop-opacity="0.0" />
+    </linearGradient>
+
+    <filter id="ambientBlur3" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="40" />
+    </filter>
+
+    <pattern id="gridPattern3" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1" fill="#ffffff" fill-opacity="0.06" />
+    </pattern>
+  </defs>
+
+  <rect width="640" height="360" fill="url(#bgGrad3)" />
+  <rect width="640" height="360" fill="url(#gridPattern3)" />
+
+  <circle cx="180" cy="120" r="110" fill="#7928ca" fill-opacity="0.25" filter="url(#ambientBlur3)" />
+  <circle cx="460" cy="220" r="120" fill="#ff6a00" fill-opacity="0.25" filter="url(#ambientBlur3)" />
+
+  <!-- Window Frame -->
+  <g transform="translate(90, 35)">
+    <rect x="0" y="0" width="460" height="290" rx="18" fill="rgba(16,18,27,0.88)" stroke="rgba(255,255,255,0.12)" stroke-width="1.2" />
+
+    <!-- Window Header -->
+    <rect x="0" y="0" width="460" height="36" rx="18" fill="#101322" />
+    <rect x="0" y="20" width="460" height="16" fill="#101322" />
+    <line x1="0" y1="36" x2="460" y2="36" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+
+    <circle cx="20" cy="18" r="5" fill="#ff5f56" />
+    <circle cx="36" cy="18" r="5" fill="#ffbd2e" />
+    <circle cx="52" cy="18" r="5" fill="#27c93f" />
+
+    <rect x="140" y="9" width="180" height="18" rx="9" fill="rgba(255,255,255,0.05)" />
+    <text x="230" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="#9aa1b2" text-anchor="middle">finance.denilson.dev</text>
+
+    <!-- Top Stats Cards -->
+    <g transform="translate(24, 52)">
+      <!-- Card 1 Saldo -->
+      <rect x="0" y="0" width="128" height="64" rx="12" fill="rgba(255,106,0,0.08)" stroke="rgba(255,106,0,0.3)" stroke-width="1" />
+      <text x="14" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" fill="#9aa1b2">Saldo Total</text>
+      <text x="14" y="44" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="800" fill="#ffffff">R$ 14.850</text>
+      <text x="14" y="56" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" font-weight="600" fill="#22c55e">↑ +18.4% este mês</text>
+
+      <!-- Card 2 Receitas -->
+      <rect x="142" y="0" width="128" height="64" rx="12" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+      <text x="156" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" fill="#9aa1b2">Receitas</text>
+      <text x="156" y="44" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="800" fill="#ff9100">R$ 8.240</text>
+      <text x="156" y="56" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" fill="#9aa1b2">32 transações</text>
+
+      <!-- Card 3 Despesas -->
+      <rect x="284" y="0" width="128" height="64" rx="12" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+      <text x="298" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" fill="#9aa1b2">Despesas</text>
+      <text x="298" y="44" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="800" fill="#c084fc">R$ 2.410</text>
+      <text x="298" y="56" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" fill="#9aa1b2">Economia de 70%</text>
+    </g>
+
+    <!-- Main Chart Panel -->
+    <g transform="translate(24, 130)">
+      <rect x="0" y="0" width="412" height="142" rx="12" fill="rgba(20,24,38,0.7)" stroke="rgba(255,255,255,0.06)" />
+      <text x="16" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700" fill="#ffffff">Fluxo Mensal & Projeções</text>
+
+      <!-- Grid lines -->
+      <line x1="16" y1="46" x2="396" y2="46" stroke="rgba(255,255,255,0.05)" stroke-dasharray="3,3" />
+      <line x1="16" y1="76" x2="396" y2="76" stroke="rgba(255,255,255,0.05)" stroke-dasharray="3,3" />
+      <line x1="16" y1="106" x2="396" y2="106" stroke="rgba(255,255,255,0.05)" stroke-dasharray="3,3" />
+
+      <!-- Area Chart Path -->
+      <path d="M 24 100 Q 80 50 140 70 T 260 40 T 380 30 L 380 120 L 24 120 Z" fill="url(#chartAreaGrad)" />
+      <path d="M 24 100 Q 80 50 140 70 T 260 40 T 380 30" fill="none" stroke="url(#primaryOrange3)" stroke-width="2.5" stroke-linecap="round" />
+
+      <!-- Dot highlights on trendline -->
+      <circle cx="140" cy="70" r="4" fill="#ff6a00" stroke="#ffffff" stroke-width="1.5" />
+      <circle cx="260" cy="40" r="4" fill="#ff9100" stroke="#ffffff" stroke-width="1.5" />
+      <circle cx="380" cy="30" r="5" fill="#ff3c00" stroke="#ffffff" stroke-width="2" />
+
+      <!-- Bars in background -->
+      <rect x="50" y="80" width="12" height="38" rx="4" fill="url(#chartBarGrad)" fill-opacity="0.6" />
+      <rect x="110" y="65" width="12" height="53" rx="4" fill="url(#chartBarGrad)" fill-opacity="0.6" />
+      <rect x="170" y="75" width="12" height="43" rx="4" fill="url(#chartBarGrad)" fill-opacity="0.6" />
+      <rect x="230" y="55" width="12" height="63" rx="4" fill="url(#chartBarGrad)" fill-opacity="0.6" />
+      <rect x="290" y="45" width="12" height="73" rx="4" fill="url(#chartBarGrad)" fill-opacity="0.6" />
+      <rect x="350" y="35" width="12" height="83" rx="4" fill="url(#chartBarGrad)" fill-opacity="0.8" />
+    </g>
+  </g>
+
+  <!-- Floating Feature Badge -->
+  <g transform="translate(35, 290)">
+    <rect x="0" y="0" width="125" height="26" rx="13" fill="rgba(121,40,202,0.18)" stroke="rgba(147,51,234,0.4)" stroke-width="1" />
+    <text x="62" y="17" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700" fill="#c084fc" text-anchor="middle">📊 Data Visualization</text>
+  </g>
+</svg>
