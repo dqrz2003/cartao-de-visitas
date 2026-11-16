@@ -7,6 +7,7 @@ Um cartão de visitas digital e interativo com estilo **Motion Design Moderno**,
 ## ✨ Funcionalidades
 
 - **Design Full-Screen & Responsivo**: Adapta-se automaticamente a qualquer tamanho de tela (Desktop, Tablet e Mobile), reorganizando as informações em grade 2x2 no computador e lista vertical em smartphones.
+- **Página de Projetos Integrada (`projetos.html`)**: Vitrine em grade responsiva com capas em destaque, descrições objetivas e links externos para aplicações funcionando ao vivo.
 - **Motion Design & Animações**:
   - Orbs ambientais de luz com movimento contínuo no fundo.
   - Anel giratório de energia neon (*conic-gradient halo*) em torno da foto de perfil.

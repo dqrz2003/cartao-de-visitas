@@ -375,13 +375,195 @@
         }
 
         /* ========================================================
-           4. COLUNA DIREITA: HUB DE REDES SOCIAIS (Grid 2x2)
+           4. COLUNA DIREITA: HUB DE REDES SOCIAIS & PROJETOS
         ======================================================== */
         .links-hub {
             display: flex;
             flex-direction: column;
             gap: 16px;
             animation: slideUp 1s var(--ease-smooth) both;
+        }
+
+        /* Botão Destacado: Veja Meus Projetos */
+        .btn-destaque-projetos {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+            padding: 22px 24px;
+            background: linear-gradient(135deg, rgba(255, 106, 0, 0.14) 0%, rgba(121, 40, 202, 0.18) 100%);
+            border: 1px solid rgba(255, 106, 0, 0.38);
+            border-radius: 24px;
+            text-decoration: none;
+            color: var(--text-white);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            overflow: hidden;
+            box-shadow: 
+                0 15px 35px -10px rgba(0, 0, 0, 0.7),
+                0 0 30px -8px var(--orange-glow);
+            transition: 
+                transform 0.4s var(--ease-elastic),
+                border-color 0.3s ease,
+                background 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .btn-destaque-projetos::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255, 106, 0, 0.22) 0%, rgba(121, 40, 202, 0.28) 100%);
+            opacity: 0;
+            transition: opacity 0.35s ease;
+            z-index: 0;
+        }
+
+        /* Feixe luminoso (Shimmer) no Hover */
+        .btn-destaque-projetos::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -120%;
+            width: 60%;
+            height: 200%;
+            background: linear-gradient(
+                90deg, 
+                transparent, 
+                rgba(255, 255, 255, 0.16), 
+                rgba(255, 106, 0, 0.3), 
+                transparent
+            );
+            transform: rotate(25deg);
+            transition: left 0.75s ease;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .destaque-conteudo {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            flex: 1;
+        }
+
+        .destaque-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            width: fit-content;
+            background: rgba(255, 106, 0, 0.12);
+            border: 1px solid rgba(255, 106, 0, 0.3);
+            padding: 3px 10px;
+            border-radius: 999px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            color: var(--orange-bright);
+            margin-bottom: 6px;
+        }
+
+        .destaque-tag-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--orange-primary);
+            box-shadow: 0 0 6px var(--orange-primary);
+        }
+
+        .destaque-titulo {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: -0.4px;
+            line-height: 1.25;
+            transition: color 0.3s ease;
+        }
+
+        .destaque-subtitulo {
+            font-size: 0.82rem;
+            color: var(--text-dim);
+            line-height: 1.4;
+            margin-top: 4px;
+            transition: color 0.3s ease;
+        }
+
+        .destaque-icone-wrapper {
+            position: relative;
+            z-index: 2;
+            width: 50px;
+            height: 50px;
+            border-radius: 16px;
+            background: rgba(255, 106, 0, 0.15);
+            border: 1px solid rgba(255, 106, 0, 0.35);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--orange-bright);
+            flex-shrink: 0;
+            box-shadow: 0 0 15px rgba(255, 106, 0, 0.15);
+            transition: 
+                transform 0.4s var(--ease-elastic),
+                background 0.3s ease,
+                color 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .destaque-seta {
+            transition: transform 0.4s var(--ease-elastic);
+        }
+
+        /* Hover & Focus State */
+        .btn-destaque-projetos:hover,
+        .btn-destaque-projetos:focus-visible {
+            transform: translateY(-5px) scale(1.02);
+            border-color: rgba(255, 145, 0, 0.7);
+            box-shadow: 
+                0 22px 40px -10px rgba(0, 0, 0, 0.8),
+                0 0 35px var(--orange-glow),
+                0 0 25px rgba(121, 40, 202, 0.3);
+            outline: none;
+        }
+
+        .btn-destaque-projetos:hover::before,
+        .btn-destaque-projetos:focus-visible::before {
+            opacity: 1;
+        }
+
+        .btn-destaque-projetos:hover::after,
+        .btn-destaque-projetos:focus-visible::after {
+            left: 150%;
+        }
+
+        .btn-destaque-projetos:hover .destaque-titulo {
+            color: var(--orange-bright);
+        }
+
+        .btn-destaque-projetos:hover .destaque-subtitulo {
+            color: #ffffff;
+        }
+
+        .btn-destaque-projetos:hover .destaque-icone-wrapper,
+        .btn-destaque-projetos:focus-visible .destaque-icone-wrapper {
+            background: linear-gradient(135deg, var(--orange-primary), var(--orange-hot));
+            border-color: var(--orange-bright);
+            color: #ffffff;
+            transform: scale(1.08);
+            box-shadow: 0 0 22px var(--orange-glow);
+        }
+
+        .btn-destaque-projetos:hover .destaque-seta,
+        .btn-destaque-projetos:focus-visible .destaque-seta {
+            transform: translateX(4px);
+        }
+
+        .btn-destaque-projetos:active {
+            transform: translateY(-2px) scale(0.99);
         }
 
         .hub-header {
@@ -652,6 +834,27 @@
                 justify-content: center;
             }
 
+            /* Ajuste mobile do botão de projetos */
+            .btn-destaque-projetos {
+                padding: 18px 18px;
+                border-radius: 20px;
+                gap: 14px;
+            }
+
+            .destaque-titulo {
+                font-size: 1.12rem;
+            }
+
+            .destaque-subtitulo {
+                font-size: 0.78rem;
+            }
+
+            .destaque-icone-wrapper {
+                width: 44px;
+                height: 44px;
+                border-radius: 14px;
+            }
+
             /* No celular, os links viram lista vertical confortável de 1 coluna */
             .redes-grid {
                 grid-template-columns: 1fr;
@@ -781,8 +984,26 @@
                 </div>
             </section>
 
-            <!-- Coluna Direita: Hub de Redes Sociais -->
+            <!-- Coluna Direita: Hub de Redes Sociais & Projetos -->
             <section class="links-hub">
+                <!-- Botão Destacado: Veja Meus Projetos -->
+                <a href="projetos.html" class="btn-destaque-projetos" id="btn-ver-projetos" aria-label="Ir para a página Veja meus projetos">
+                    <div class="destaque-conteudo">
+                        <div class="destaque-tag">
+                            <span class="destaque-tag-dot"></span>
+                            <span>Portfólio & Criações</span>
+                        </div>
+                        <span class="destaque-titulo">Veja meus projetos</span>
+                        <span class="destaque-subtitulo">Aplicações práticas, interfaces modernas e código funcional</span>
+                    </div>
+                    <div class="destaque-icone-wrapper" aria-hidden="true">
+                        <svg class="destaque-seta" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </div>
+                </a>
+
                 <div class="hub-header">
                     <h2 class="hub-titulo">Minhas Conexões</h2>
                     <span class="hub-subtitulo">Clique para acessar</span>
